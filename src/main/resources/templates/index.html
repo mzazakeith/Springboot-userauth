@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+
+<br>
+<br>
+
+<ul>
+    <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+</ul>
+<div class="container">
+    Welcome <span sec:authentication="principal.username"> User</span>
+</div>
+</body>
+</html>
